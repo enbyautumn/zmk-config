@@ -33,17 +33,17 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (Boardsource 3x4 Macropad)
-        run: west build -s zmk/app -b nrfmicro_13 -- -DSHIELD=boardsource3x4 -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Boardsource 3x4 Macropad DTS File
+      - name: West Build (whiteboard)
+        run: west build -s zmk/app -b nrfmicro_13 -- -DSHIELD=whiteboard -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: whiteboard DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nrfmicro_13.dts.pre.tmp
-      - name: Boardsource 3x4 Macropad Kconfig file
+      - name: whiteboard Macropad Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 boardsource3x4_nrfmicro_13.uf2
-      - name: Archive (Boardsource 3x4 Macropad)
+        run: cp build/zephyr/zmk.uf2 whiteboard_nrfmicro_13.uf2
+      - name: Archive (whiteboard)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: boardsource3x4_nrfmicro_13.uf2
+          path: whiteboard_nrfmicro_13.uf2
