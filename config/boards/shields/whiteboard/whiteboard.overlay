@@ -59,10 +59,8 @@
         resolution = <4>;
     };
     
-    &left_encoder {
-        status = "okay";
-    };
+};
 
-    
-
+&left_encoder {
+    status = "okay";
 };
