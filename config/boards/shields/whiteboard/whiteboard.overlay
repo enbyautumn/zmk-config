@@ -54,8 +54,8 @@
     left_encoder: encoder_left {
         compatible = "alps,ec11";
         label = "LEFT_ENCODER";
-        a-gpios = <&pro_micro_b 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro_b 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         resolution = <4>;
     };
     
