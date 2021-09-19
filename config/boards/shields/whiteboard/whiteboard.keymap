@@ -4,10 +4,6 @@
 #define LOWR 1
 #define RAIS 2
 
-&left_encoder {
-    status = "okay";
-};
-
 / {
     keymap {
         compatible = "zmk,keymap";
