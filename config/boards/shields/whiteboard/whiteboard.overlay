@@ -51,16 +51,12 @@
         >;
     };
 
-    left_encoder: encoder_left {
+    left_encoder: left_encoder {
         compatible = "alps,ec11";
-        label = "LEFT_ENCODER";
+        label = "left_encoder";
         a-gpios = <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         resolution = <4>;
     };
     
-};
-
-&left_encoder {
-    status = "okay";
 };
