@@ -1,6 +1,6 @@
 if SHIELD_WHITEBOARD
 
 config ZMK_KEYBOARD_NAME
-    default "Nyaa~ ♡(◕ᗜ◕✿)"
+    default "Nya~ ♡(◕ᗜ◕✿)"
 
 endif
